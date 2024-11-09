@@ -1,0 +1,9 @@
+.underscore {
+  animation: blinking 1.5s steps(2) infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+}

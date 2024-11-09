@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  min-height: max-content;
+  height: 100vh;
+  background-color: light-dark(#e4f1fe, #34495e);
+  padding: 50px;
+  transform: translate3d(0, 0, 0);
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.icon {
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: 40px;
+  }
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 65px;
+  }
+}
+
+.heading {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.underscore {
+  animation: blinking 1.5s steps(2) infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+}
