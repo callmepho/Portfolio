@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  min-height: max-content;
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content;
   background-color: light-dark(#e4f1fe, #34495e);
   padding: 50px;
-  transform: translate3d(0, 0, 0);
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 100vh 10vh;
 }
 
 .grid {

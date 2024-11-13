@@ -2,7 +2,6 @@ import React from "react";
 
 import { Grid, Container, Text, Title } from "@mantine/core";
 import StackIcon from "tech-stack-icons";
-
 import classes from "./SkillsGrid.module.scss";
 import Typewriter from "../Typewriter/Typewriter";
 

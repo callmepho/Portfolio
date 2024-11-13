@@ -15,13 +15,17 @@
     "@mantine/form": "^7.13.1",
     "@mantine/hooks": "^7.13.2",
     "@mantine/modals": "^7.13.2",
+    "@tabler/icons-react": "^3.22.0",
+    "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "embla-carousel-react": "^7.1.0",
+    "framer-motion": "^11.11.13",
     "next": "14.2.14",
     "portfolio": "file:",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.4",
     "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
