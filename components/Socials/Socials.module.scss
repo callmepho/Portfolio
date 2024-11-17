@@ -2,7 +2,6 @@
   min-height: 100vh;
   max-height: max-content;
   display: flex;
-  justify-content: center;
   background: light-dark(#e4f1fe, #34495e);
   gap: 50px;
   padding: 20px;
@@ -50,7 +49,7 @@
 .section {
   display: flex;
   gap: 50px;
-  align-self: center;
+  justify-content: center;
 
   flex-wrap: wrap;
 }
