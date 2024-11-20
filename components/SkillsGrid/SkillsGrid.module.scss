@@ -6,14 +6,8 @@
   min-height: 100vh;
   height: max-content;
   background-color: light-dark(#e4f1fe, #34495e);
-  padding: 50px;
+  padding: 50px 100px;
   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 100vh 10vh;
-}
-
-.grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .skill {
@@ -26,12 +20,13 @@
 }
 
 .icon {
-  @media (max-width: $mantine-breakpoint-xs) {
+  @media (max-width: $mantine-breakpoint-md) {
     height: 40px;
   }
-  @media (max-width: $mantine-breakpoint-sm) {
-    height: 65px;
+  @media (max-width: $mantine-breakpoint-lg) {
+    height: 50px;
   }
+  height: 55px;
 }
 
 .heading {

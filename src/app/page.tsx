@@ -18,7 +18,7 @@ export default function Home() {
       <div id="projects">
         <CardsCarousel />
       </div>
-      <div>
+      <div id="aboutme">
         <Socials />
       </div>
     </>

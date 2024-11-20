@@ -32,7 +32,7 @@ const SkillsGrid = () => {
       <Title className={classes.heading} order={2}>
         <Typewriter text="I can coded in" />
       </Title>
-      <Grid className={classes.grid}>
+      <Grid justify="center">
         {skills.map((skill, idx) => (
           <Grid.Col span={{ base: 12, sm: "content", lg: "content" }} key={idx}>
             <div className={classes.skill}>

@@ -11,7 +11,7 @@ import me from "./me.png";
 export const Socials = () => {
   return (
     <Container fluid className={classes.container}>
-      <Title order={2} className={classes.heading} id="aboutme">
+      <Title order={2} className={classes.heading}>
         <Typewriter text="A little about me" />
       </Title>
       <div className={classes.section}>
