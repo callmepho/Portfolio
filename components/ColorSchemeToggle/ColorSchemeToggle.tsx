@@ -5,19 +5,22 @@ import light from "./light.svg";
 import dark from "./dark.svg";
 import auto from "./auto.svg";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export function ColorSchemeToggle() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
   const schemes: MantineColorScheme[] = ["light", "dark", "auto"];
-
+  const [icon, setIcon] = useState(light);
+  const [mode, setMode] = useState("light");
   const handleToggle = () => {
     const nextScheme =
       schemes[(schemes.indexOf(colorScheme) + 1) % schemes.length];
     setColorScheme(nextScheme);
+    setIcon(getIcon(colorScheme));
   };
 
-  const getIcon = () => {
-    switch (colorScheme) {
+  const getIcon = (scheme: MantineColorScheme) => {
+    switch (scheme) {
       case "light":
         return light;
       case "dark":
@@ -27,6 +30,11 @@ export function ColorSchemeToggle() {
         return auto;
     }
   };
+
+  useEffect(() => {
+    setIcon(getIcon(colorScheme));
+    setMode(colorScheme);
+  }, [colorScheme]);
 
   return (
     <div
@@ -38,12 +46,8 @@ export function ColorSchemeToggle() {
         cursor: "pointer",
       }}
       onClick={handleToggle}>
-      <Image
-        src={getIcon()}
-        alt={`${colorScheme} mode icon`}
-        style={{ width: 20, height: 20 }}
-      />
-      <Text size="xs">{colorScheme}</Text>
+      <Image width={25} height={25} src={icon} alt={`mode icon`} />
+      <Text size="xs">{mode}</Text>
     </div>
   );
 }

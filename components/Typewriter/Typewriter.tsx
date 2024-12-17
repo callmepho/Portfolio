@@ -23,6 +23,11 @@ const Typewriter: React.FC<TypewriterProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);
+          } else {
+            setIsInView(false);
+            // Reset text and blinking when out of view
+            setDisplayText("");
+            setIsBlinking(true);
           }
         });
       },

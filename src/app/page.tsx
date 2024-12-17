@@ -4,6 +4,7 @@ import { HeaderSimple } from "../../components/HeaderSimple/HeaderSimple";
 import Landing from "../../components/Landing/Landing";
 import SkillsGrid from "../../components/SkillsGrid/SkillsGrid";
 import { Socials } from "../../components/Socials/Socials";
+import Script from "next/script";
 
 export default function Home() {
   return (
