@@ -41,7 +41,7 @@ export const Socials = () => {
             href="https://www.linkedin.com/in/minh-anthony-tat"
             className={classes.link}>
             <Image src={linkedin} alt="linkedIn" className={classes.icon} />
-            @callmepho
+            minhanthonytat
           </a>
           <a href="https://github.com/callmepho" className={classes.link}>
             <Image src={github} alt="github" className={classes.icon} />

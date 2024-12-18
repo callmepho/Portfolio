@@ -7,6 +7,7 @@ import Script from "next/script";
 const Landing = () => {
   const vantaRef = useRef<HTMLDivElement>(null);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!vantaEffect && window.VANTA) {
@@ -21,6 +22,7 @@ const Landing = () => {
         })
       );
     }
+    setLoading(false);
     return () => {
       vantaEffect?.destroy();
     };
@@ -31,11 +33,17 @@ const Landing = () => {
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"
         strategy="beforeInteractive"
+        onLoad={() => {
+          setLoading(false);
+        }}
       />
 
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.globe.min.js"
         strategy="beforeInteractive"
+        onLoad={() => {
+          setLoading(false);
+        }}
       />
       <div className={classes.container} ref={vantaRef}>
         <h1 className={classes.name}>
