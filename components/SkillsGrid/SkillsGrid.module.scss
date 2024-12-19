@@ -6,7 +6,10 @@
   min-height: 100vh;
   height: max-content;
   background-color: light-dark(#e4f1fe, #34495e);
-  padding: 50px 100px;
+  padding: 50px 75px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 50px 10px;
+  }
   // box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 100vh 10vh;
 }
 
@@ -17,6 +20,16 @@
   align-items: center;
   min-height: 50px;
   font-family: "IBM Plex Mono", monospace;
+}
+
+.text {
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: x-small;
+  }
+  @media (max-width: $mantine-breakpoint-lg) {
+    font-size: large;
+  }
+  font-size: large;
 }
 
 .icon {
@@ -31,6 +44,10 @@
 
 .heading {
   font-family: "IBM Plex Mono", monospace;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    align-self: center;
+  }
 }
 
 .underscore {

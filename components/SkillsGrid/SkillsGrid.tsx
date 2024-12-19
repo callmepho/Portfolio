@@ -34,10 +34,10 @@ const SkillsGrid = () => {
       </Title>
       <Grid justify="center">
         {skills.map((skill, idx) => (
-          <Grid.Col span={{ base: 12, sm: "content", lg: "content" }} key={idx}>
+          <Grid.Col span={{ base: 6, sm: "content", lg: "content" }} key={idx}>
             <div className={classes.skill}>
               <StackIcon name={skill} className={classes.icon} />
-              <Text size="xl" tt="uppercase">
+              <Text tt="uppercase" className={classes.text}>
                 {skill}
               </Text>
             </div>

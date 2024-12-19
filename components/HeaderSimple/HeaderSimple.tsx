@@ -3,9 +3,8 @@ import { useState } from "react";
 import { Container, Group, Burger, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./HeaderSimple.module.scss";
-import logo from "../../src/app/logo.png";
-import Image from "next/image";
 import { ColorSchemeToggle } from "../ColorSchemeToggle/ColorSchemeToggle";
+import { Logo } from "../Logo/Logo";
 
 const links = [
   { link: "#skills", label: "Tech Skills" },
@@ -34,7 +33,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="responsive" className={classes.inner}>
-        <Image src={logo} height={40} width={40} alt="logo" />
+        <Logo />
         <Group gap={5} visibleFrom="xs">
           {items}
           <ColorSchemeToggle />
