@@ -10,6 +10,8 @@ import {
 import classes from "./CardsCarousel.module.scss";
 import StackIcon from "tech-stack-icons";
 import Typewriter from "../Typewriter/Typewriter";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 interface CardProps {
   image: string;
@@ -104,6 +106,8 @@ export function CardsCarousel() {
     </Carousel.Slide>
   ));
 
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+
   return (
     <div className={classes.container}>
       <Container fluid>
@@ -117,6 +121,9 @@ export function CardsCarousel() {
         height={500}
         slideGap="md"
         loop
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={() => autoplay.current.play()}
         classNames={classes}>
         {slides}
       </Carousel>
