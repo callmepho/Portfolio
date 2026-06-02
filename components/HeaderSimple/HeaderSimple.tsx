@@ -25,6 +25,7 @@ export function HeaderSimple() {
       data-active={active === link.link || undefined}
       onClick={() => {
         setActive(link.link);
+        close();
       }}>
       {link.label}
     </a>
